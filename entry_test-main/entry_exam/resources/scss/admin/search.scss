@@ -1,0 +1,79 @@
+@use 'variables' as *;
+
+.search-form {
+    background: $color-panel;
+    border: 1px solid $color-line;
+    border-radius: $radius;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+
+    form {
+        margin: 0;
+    }
+
+    .search-fields {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        gap: 16px;
+    }
+
+    .field {
+        flex: 1 1 190px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        min-width: 0;
+        font-size: 13px;
+        font-weight: 700;
+        color: $color-muted;
+
+        input,
+        select {
+            width: 100%;
+            font-weight: 400;
+        }
+    }
+
+    .btn {
+        height: 42px;
+        min-width: 112px;
+    }
+
+    @include mobile {
+        padding: 16px;
+
+        .field {
+            flex-basis: 100%;
+        }
+
+        .btn {
+            width: 100%;
+        }
+    }
+}
+
+.page-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0 24px;
+
+    > .btn {
+        margin-top: 4px;
+        height: 42px;
+    }
+
+    @include mobile {
+        > .btn {
+            width: 100%;
+            margin: 0 0 20px;
+        }
+    }
+}
+
+.btn-icon {
+    width: 14px;
+    height: 14px;
+}

@@ -22,6 +22,6 @@ class Prefecture extends Model
      */
     public function hotel(): HasMany
     {
-        return $this->hasMany(Hotel::class);
+        return $this->hasMany(Hotel::class, 'prefecture_id', 'prefecture_id');
     }
 }

@@ -1,22 +1,110 @@
+@use 'variables' as *;
+
 .search-result {
-    padding-left: 320px;
-}
-table.shopsearchlist_table {
-    border-left: 1px solid #000;
-    border-top: 1px solid #000;
-    table-layout: fixed;
-    background-color: #ffffff;
-    font-size: 13px;
+    background: $color-panel;
+    border: 1px solid $color-line;
+    border-radius: $radius;
+    padding: 20px 24px 24px;
+
+    @include mobile {
+        padding: 16px;
+    }
 }
 
-#shop_name {
-    min-width: 111px;
-    text-align: center;
-    width: 111px;
+.result-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 4px 16px;
+    margin-bottom: 14px;
 }
 
 h3.search-result-title {
-    font-size: 24px;
-    color: gray;
-    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.result-count {
+    margin: 0;
+    color: $color-muted;
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+
+    strong {
+        color: $color-text;
+    }
+}
+
+.result-empty {
+    margin: 8px 0 0;
+    color: $color-muted;
+}
+
+table.shopsearchlist_table {
+    width: 100%;
+    min-width: 680px;
+    font-size: 14px;
+
+    th,
+    td {
+        padding: 10px 12px;
+        border-bottom: 1px solid $color-line;
+        text-align: left;
+        vertical-align: middle;
+        white-space: nowrap;
+    }
+
+    thead th {
+        position: sticky;
+        top: 0;
+        background: $color-panel;
+        border-bottom: 2px solid $color-text;
+        font-size: 13px;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    tbody tr:nth-child(even) {
+        background: $color-row-alt;
+    }
+
+    tbody tr:hover {
+        background: $color-row-hover;
+    }
+
+    .num {
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+        color: $color-muted;
+    }
+
+    .actions {
+        width: 1%;
+        white-space: nowrap;
+        text-align: right;
+
+        form {
+            display: inline;
+            margin: 0 0 0 6px;
+        }
+    }
+
+    &.is-compact {
+        font-size: 13px;
+
+        th,
+        td {
+            padding: 10px 8px;
+        }
+    }
+
+    a.hotel-link {
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }

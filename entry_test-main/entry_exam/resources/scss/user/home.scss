@@ -36,3 +36,21 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .container{
+        .prefecture_container{
+            padding: 16px;
+            .area_container{
+                flex-direction: column;
+                .side-wrapper{
+                    width: 100%;
+                }
+            }
+        }
+        .pref{
+            display: inline-block;
+            padding: 4px 0;
+        }
+    }
+}

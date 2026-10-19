@@ -19,8 +19,29 @@
             margin: 25px 0;
             display: flex;
         }
+        .left_wrapper{
+            flex: 0 0 auto;
+            max-width: 40%;
+        }
         .right_wrapper{
             padding: 0 0 0 35px;
+        }
+        @media (max-width: 600px) {
+            padding: 16px;
+            .hotel_title{
+                font-size: 24px;
+                line-height: 36px;
+            }
+            .hotellist_wrapper{
+                flex-direction: column;
+                padding: 12px;
+            }
+            .left_wrapper{
+                max-width: 100%;
+            }
+            .right_wrapper{
+                padding: 12px 0 0;
+            }
         }
         .hotel_link:hover{
             img{

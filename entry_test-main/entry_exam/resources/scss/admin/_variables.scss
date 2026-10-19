@@ -1,0 +1,40 @@
+$color-bg: #ecefea;
+$color-panel: #ffffff;
+$color-line: #d5dbd3;
+$color-line-strong: #b9c2b7;
+$color-text: #1c2430;
+$color-muted: #66707c;
+$color-indigo: #1e3a5f;
+$color-indigo-dark: #152a46;
+$color-indigo-soft: #e6ecf4;
+$color-brand: #48ac37;
+$color-danger: #b5412f;
+$color-danger-soft: #fbeeeb;
+$color-success: #2f7a3a;
+$color-success-soft: #ebf5ec;
+$color-row-alt: #f6f8f5;
+$color-row-hover: #eef3f9;
+
+$font-base: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+
+$radius: 6px;
+$menu-width: 232px;
+$bp-tablet: 900px;
+$bp-mobile: 600px;
+
+@mixin tablet {
+    @media (max-width: $bp-tablet) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $bp-mobile) {
+        @content;
+    }
+}
+
+@mixin focus-ring {
+    outline: 3px solid rgba($color-indigo, 0.35);
+    outline-offset: 1px;
+}

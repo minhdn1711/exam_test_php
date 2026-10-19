@@ -1,11 +1,16 @@
-h2.title {
-    font-size: 32px;
-    color: gray;
-    text-align: center;
-    padding: 10px 0 50px;
-    margin: 0;
-}
-p.description {
-    font-size: 16px;
-    text-align: center;
+@use 'variables' as *;
+
+.top {
+    max-width: 640px;
+    padding-top: 24px;
+
+    h2.title {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+
+    p.description {
+        color: $color-muted;
+        line-height: 1.9;
+    }
 }
